@@ -53,10 +53,10 @@ export default function ManifestoPage() {
         </div>
 
         {/* ACT I: THE HERO — 0.0 - 0.2 */}
-        <section className="sticky top-0 h-screen w-full flex flex-col items-center justify-center p-6 z-10 overflow-hidden gpu-accelerate">
+        <section className="sticky top-0 h-screen w-full flex flex-col items-center justify-center p-6 z-10 overflow-hidden">
            <motion.div 
              style={{ scale: heroScale, opacity: heroOpacity }}
-             className="max-w-4xl w-full text-center space-y-8 flex-1 flex flex-col justify-center"
+             className="max-w-4xl w-full text-center space-y-8 flex-1 flex flex-col justify-center gpu-accelerate"
            >
               <div className="space-y-8">
                 <motion.div 
@@ -85,13 +85,13 @@ export default function ManifestoPage() {
         </section>
 
         {/* ACT II: THE VILLAIN — 0.2 - 0.4 */}
-        <section className="sticky top-0 h-screen w-full flex items-center justify-center p-6 z-20 overflow-hidden pointer-events-none gpu-accelerate">
+        <section className="sticky top-0 h-screen w-full flex items-center justify-center p-6 z-20 overflow-hidden pointer-events-none">
            <motion.div 
              style={{ 
                opacity: useTransform(scrollYProgress, [0.2, 0.25, 0.35, 0.4], [0, 1, 1, 0]),
                x: useTransform(scrollYProgress, [0.2, 0.4], [20, -20])
              }}
-             className="max-w-4xl w-full text-center space-y-8"
+             className="max-w-4xl w-full text-center space-y-8 gpu-accelerate"
            >
               <div className="font-mono text-[10px] text-[#C04838] tracking-[0.5em] uppercase">Act II · The Friction</div>
               <h2 className="text-4xl md:text-6xl font-display font-normal text-text-bright">
@@ -114,13 +114,13 @@ export default function ManifestoPage() {
         </section>
 
         {/* ACT III: THE STAKES — 0.4 - 0.6 */}
-        <section className="sticky top-0 h-screen w-full flex items-center justify-center p-6 z-30 overflow-hidden gpu-accelerate">
+        <section className="sticky top-0 h-screen w-full flex items-center justify-center p-6 z-30 overflow-hidden">
            <motion.div 
              style={{ 
                opacity: useTransform(scrollYProgress, [0.4, 0.45, 0.55, 0.6], [0, 1, 1, 0]),
                scale: useTransform(scrollYProgress, [0.4, 0.6], [1.1, 1])
              }}
-             className="max-w-5xl w-full flex flex-col md:flex-row gap-16 items-center"
+             className="max-w-5xl w-full flex flex-col md:flex-row gap-16 items-center gpu-accelerate"
            >
               <div className="flex-1 space-y-12">
                  <div className="font-mono text-[10px] text-teal-primary tracking-[0.5em] uppercase">Act III · The Territory</div>
@@ -156,13 +156,13 @@ export default function ManifestoPage() {
         </section>
 
         {/* ACT IV: THE GENESIS — 0.6 - 0.8 */}
-        <section className="sticky top-0 h-screen w-full flex items-center justify-center p-6 z-40 overflow-hidden gpu-accelerate">
+        <section className="sticky top-0 h-screen w-full flex items-center justify-center p-6 z-40 overflow-hidden">
            <motion.div 
              style={{ 
                opacity: useTransform(scrollYProgress, [0.6, 0.65, 0.75, 0.8], [0, 1, 1, 0]),
                y: useTransform(scrollYProgress, [0.6, 0.8], [30, -30])
              }}
-             className="max-w-4xl w-full text-center space-y-12"
+             className="max-w-4xl w-full text-center space-y-12 gpu-accelerate"
            >
               <div className="font-mono text-[10px] text-gold-primary tracking-[0.5em] uppercase">Act IV · The Spark</div>
               <div className="space-y-8">
@@ -182,13 +182,13 @@ export default function ManifestoPage() {
         </section>
 
         {/* ACT V: THE RESOLUTION — 0.8 - 1.0 */}
-        <section className="sticky top-0 h-screen w-full flex flex-col items-center justify-center p-6 md:p-12 z-40 overflow-hidden bg-bg-deep gpu-accelerate">
+        <section className="sticky top-0 h-screen w-full flex flex-col items-center justify-center p-6 md:p-12 z-40 overflow-hidden bg-bg-deep">
            <motion.div 
              style={{ 
                opacity: useTransform(scrollYProgress, [0.8, 0.85, 0.95], [0, 1, 1]),
                scale: useTransform(scrollYProgress, [0.8, 0.95], [0.95, 1])
              }}
-             className="max-w-4xl w-full text-center space-y-10 md:space-y-16 mb-20 md:mb-0"
+             className="max-w-4xl w-full text-center space-y-10 md:space-y-16 mb-20 md:mb-0 gpu-accelerate"
            >
               <div className="space-y-4">
                  <motion.div 

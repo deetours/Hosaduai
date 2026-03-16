@@ -28,7 +28,7 @@ export default function Home() {
       <Nav />
       <main className="bg-bg-deep">
         {/* ACT 1: THE HOOK — Intrigue & Curiosity */}
-        <div id="act-1" className="gpu-accelerate">
+        <div id="act-1">
           <Hero />
         </div>
 
@@ -36,7 +36,7 @@ export default function Home() {
         <SectionDivider />
 
         {/* ACT 2: THE PROBLEM — Recognition & Empathy */}
-        <div id="act-2" className="gpu-accelerate">
+        <div id="act-2">
           <SceneBlock />
         </div>
 
@@ -44,7 +44,7 @@ export default function Home() {
         <SectionDivider />
 
         {/* ACT 3: THE PIVOT — Hope & Relief */}
-        <div id="act-3" className="gpu-accelerate">
+        <div id="act-3">
           <BeforeAfterBlock />
         </div>
 
@@ -52,7 +52,7 @@ export default function Home() {
         <SectionDivider />
 
         {/* ACT 4: THE SYSTEM — Conviction & Confidence */}
-        <div id="act-4" className="gpu-accelerate">
+        <div id="act-4">
           <SolutionBlock />
         </div>
 
@@ -60,7 +60,7 @@ export default function Home() {
         <SectionDivider />
 
         {/* ACT 5: THE DECISION — Clarity & Action */}
-        <div id="act-5" className="gpu-accelerate">
+        <div id="act-5">
           <ClosingCTABlock />
         </div>
       </main>

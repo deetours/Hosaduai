@@ -72,7 +72,7 @@ export function SceneBlock() {
           trigger: containerRef.current,
           start: 'top top',
           end: `+=${sceneLines.length * 120}%`,
-          scrub: 1.5,
+          scrub: 1, // Reduced for tighter response
           pin: true,
           anticipatePin: 1,
         }
@@ -162,7 +162,7 @@ export function SceneBlock() {
       </div>
 
       {/* Centered stage — all lines stack here */}
-      <div className="sticky top-0 h-screen flex flex-col items-center justify-center px-6 md:px-16 relative z-10">
+      <div className="h-screen flex flex-col items-center justify-center px-6 md:px-16 relative z-10 gpu-accelerate">
         <div className="relative w-full max-w-3xl mx-auto text-center">
           {sceneLines.map((line, i) => (
             <div
