@@ -188,7 +188,7 @@ export default function ManifestoPage() {
                opacity: useTransform(scrollYProgress, [0.8, 0.85, 0.95], [0, 1, 1]),
                scale: useTransform(scrollYProgress, [0.8, 0.95], [0.95, 1])
              }}
-             className="max-w-4xl w-full text-center space-y-10 md:space-y-16 mb-20 md:mb-0 gpu-accelerate"
+             className="max-w-4xl w-full text-center space-y-10 md:space-y-16 mb-32 md:mb-0 gpu-accelerate"
            >
               <div className="space-y-4">
                  <motion.div 
@@ -234,7 +234,7 @@ export default function ManifestoPage() {
            </motion.div>
            
            {/* Fixed Footer at the very bottom of the viewport */}
-           <div className="absolute bottom-6 md:bottom-10 left-0 right-0 font-mono text-[7px] md:text-[8px] text-text-tertiary/20 tracking-[0.5em] md:tracking-[1em] uppercase text-center pointer-events-none px-6">
+           <div className="absolute bottom-4 md:bottom-10 left-0 right-0 font-mono text-[7px] md:text-[8px] text-text-tertiary/10 tracking-[0.5em] md:tracking-[1em] uppercase text-center pointer-events-none px-6">
              HosaduAI · Born in Bangalore · Built for the Future
            </div>
         </section>
