@@ -47,7 +47,7 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    /* Let Lenis handle scroll behavior, or native on mobile */
   }
 
   /* Typography Scale */
@@ -89,7 +89,14 @@
 
   /* Utility Classes */
   .smooth-scroll {
-    scroll-behavior: smooth;
+    /* Handled by JS */
+  }
+
+  /* GPU Acceleration Utility */
+  .gpu-accelerate {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 
   /* SVG Noise Texture */

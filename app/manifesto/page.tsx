@@ -14,9 +14,13 @@ export default function ManifestoPage() {
   })
 
   // Act-specific transforms
-  // Backdrop color & filter
+  // Backdrop color & filter - optimized for mobile
   const bgOpacity = useTransform(scrollYProgress, [0.2, 0.4, 0.6, 0.8], [1, 1, 1, 1])
-  const bgFilter = useTransform(scrollYProgress, [0.2, 0.3, 0.5, 0.7], ['blur(0px)', 'blur(10px)', 'blur(5px)', 'blur(0px)'])
+  const bgFilter = useTransform(
+    scrollYProgress, 
+    [0.2, 0.3, 0.5, 0.7], 
+    ['blur(0px)', 'blur(10px)', 'blur(5px)', 'blur(0px)']
+  )
   
   // Villain Glitch Intensity (Act II: 0.2 - 0.4)
   const glitchOpacity = useTransform(scrollYProgress, [0.2, 0.25, 0.35, 0.4], [0, 0.4, 0.4, 0])
@@ -38,7 +42,7 @@ export default function ManifestoPage() {
                opacity: useTransform(scrollYProgress, [0.5, 0.8], [0.05, 0.15]),
                scale: useTransform(scrollYProgress, [0.5, 1], [0.8, 1.2]) 
              }}
-             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] rounded-full blur-[180px] bg-gold-primary/10"
+             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] md:w-[80vw] h-[90vw] md:h-[80vw] rounded-full blur-[100px] md:blur-[180px] bg-gold-primary/10 gpu-accelerate"
            />
            
            {/* Villain Red - active in Act II */}
@@ -49,7 +53,7 @@ export default function ManifestoPage() {
         </div>
 
         {/* ACT I: THE HERO — 0.0 - 0.2 */}
-        <section className="sticky top-0 h-screen w-full flex flex-col items-center justify-center p-6 z-10 overflow-hidden">
+        <section className="sticky top-0 h-screen w-full flex flex-col items-center justify-center p-6 z-10 overflow-hidden gpu-accelerate">
            <motion.div 
              style={{ scale: heroScale, opacity: heroOpacity }}
              className="max-w-4xl w-full text-center space-y-8 flex-1 flex flex-col justify-center"
@@ -81,7 +85,7 @@ export default function ManifestoPage() {
         </section>
 
         {/* ACT II: THE VILLAIN — 0.2 - 0.4 */}
-        <section className="sticky top-0 h-screen w-full flex items-center justify-center p-6 z-20 overflow-hidden pointer-events-none">
+        <section className="sticky top-0 h-screen w-full flex items-center justify-center p-6 z-20 overflow-hidden pointer-events-none gpu-accelerate">
            <motion.div 
              style={{ 
                opacity: useTransform(scrollYProgress, [0.2, 0.25, 0.35, 0.4], [0, 1, 1, 0]),
@@ -110,7 +114,7 @@ export default function ManifestoPage() {
         </section>
 
         {/* ACT III: THE STAKES — 0.4 - 0.6 */}
-        <section className="sticky top-0 h-screen w-full flex items-center justify-center p-6 z-30 overflow-hidden">
+        <section className="sticky top-0 h-screen w-full flex items-center justify-center p-6 z-30 overflow-hidden gpu-accelerate">
            <motion.div 
              style={{ 
                opacity: useTransform(scrollYProgress, [0.4, 0.45, 0.55, 0.6], [0, 1, 1, 0]),
@@ -152,7 +156,7 @@ export default function ManifestoPage() {
         </section>
 
         {/* ACT IV: THE GENESIS — 0.6 - 0.8 */}
-        <section className="sticky top-0 h-screen w-full flex items-center justify-center p-6 z-40 overflow-hidden">
+        <section className="sticky top-0 h-screen w-full flex items-center justify-center p-6 z-40 overflow-hidden gpu-accelerate">
            <motion.div 
              style={{ 
                opacity: useTransform(scrollYProgress, [0.6, 0.65, 0.75, 0.8], [0, 1, 1, 0]),
@@ -178,7 +182,7 @@ export default function ManifestoPage() {
         </section>
 
         {/* ACT V: THE RESOLUTION — 0.8 - 1.0 */}
-        <section className="sticky top-0 h-screen w-full flex flex-col items-center justify-center p-6 md:p-12 z-40 overflow-hidden bg-bg-deep">
+        <section className="sticky top-0 h-screen w-full flex flex-col items-center justify-center p-6 md:p-12 z-40 overflow-hidden bg-bg-deep gpu-accelerate">
            <motion.div 
              style={{ 
                opacity: useTransform(scrollYProgress, [0.8, 0.85, 0.95], [0, 1, 1]),

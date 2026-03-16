@@ -27,7 +27,7 @@ export function Nav() {
     <>
       {/* Desktop Nav */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 hidden md:flex items-center justify-between px-7 border-b ${
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 hidden md:flex items-center justify-between px-7 border-b gpu-accelerate ${
           scrolled
             ? 'bg-bg-deep/70 backdrop-blur-2xl border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.1)] h-14'
             : 'bg-transparent border-transparent h-20'
@@ -65,7 +65,7 @@ export function Nav() {
       </nav>
 
       {/* Mobile Nav */}
-      <nav className="md:hidden fixed top-0 left-0 right-0 z-50 bg-bg-base border-b border-border-default px-4 py-3 flex items-center justify-between">
+      <nav className="md:hidden fixed top-0 left-0 right-0 z-50 bg-bg-base border-b border-border-default px-4 py-3 flex items-center justify-between gpu-accelerate">
         <Link href="/" className="flex flex-col gap-0.5">
           <div className="font-display text-base font-normal text-text-primary">
             Hosadu<span className="text-gold-primary">AI</span>

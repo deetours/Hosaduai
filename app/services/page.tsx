@@ -62,7 +62,7 @@ export default function ServicesPage() {
       <main ref={containerRef} className="bg-bg-deep selection:bg-gold-primary/30">
         
         {/* HERO SECTION */}
-        <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden z-20">
+        <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden z-20 gpu-accelerate">
           <motion.div 
             style={{ opacity: heroOpacity, scale: heroScale }}
             className="text-center space-y-8 px-6"
@@ -101,7 +101,7 @@ export default function ServicesPage() {
         </section>
 
         {/* ANTI-TIER PRICING SECTION */}
-        <section className="relative min-h-[120vh] flex flex-col items-center justify-center bg-bg-deep px-6 py-24 z-30">
+        <section className="relative min-h-[120vh] flex flex-col items-center justify-center bg-bg-deep px-6 py-24 z-30 gpu-accelerate">
           
           <div className="max-w-4xl w-full text-center space-y-16">
             
@@ -184,7 +184,7 @@ function ServiceRow({ service, index, progress }: { service: any, index: number,
   return (
     <motion.div 
       style={{ opacity, y }}
-      className="sticky top-0 h-screen w-full flex items-center justify-center px-6"
+      className="sticky top-0 h-screen w-full flex items-center justify-center px-6 gpu-accelerate"
     >
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         
