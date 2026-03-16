@@ -74,7 +74,7 @@ export function Footer() {
         <div className="pt-8 md:pt-4 border-t border-border-default flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 text-center md:text-left">
           {/* Copyright */}
           <p className="font-mono text-[10px] text-text-tertiary">
-            © 2024 HosaduAI. All rights reserved.
+            © 2026 HosaduAI. All rights reserved.
           </p>
 
           {/* Tagline */}

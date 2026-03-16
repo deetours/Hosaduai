@@ -228,7 +228,7 @@ To add:
 
 ## License
 
-© 2024 HosaduAI. All rights reserved.
+© 2026 HosaduAI. All rights reserved.
 
 ## Support
 

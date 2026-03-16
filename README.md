@@ -179,7 +179,7 @@ Framer Motion variants are defined in `lib/animations.ts` and can be imported an
 
 ## License
 
-© 2024 HosaduAI. All rights reserved.
+© 2026 HosaduAI. All rights reserved.
 
 ## Contact
 
