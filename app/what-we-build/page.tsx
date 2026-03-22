@@ -9,12 +9,12 @@ import { SectionDivider } from '@/components/SectionDivider'
 
 // Hex orbital positions (degrees around a circle, starting top)
 const ORBIT_NODES = [
-  { angle: -90, label: 'Communication\nIntelligence', short: 'COMM', color: '#C8A04A' },
-  { angle: -30, label: 'Document\nEngine',          short: 'DOCS', color: '#3D9080' },
-  { angle:  30, label: 'Vendor\nCoordination',      short: 'VEND', color: '#FB923C' },
-  { angle:  90, label: 'Project\nIntelligence',     short: 'PROJ', color: '#818CF8' },
-  { angle: 150, label: 'Financial\nIntelligence',   short: 'FIN',  color: '#4ADE80' },
-  { angle: -150, label: 'Client\nExperience',       short: 'CX',   color: '#C8A04A' },
+  { angle: -90, label: 'Web\nApps', short: 'WEB', color: '#C8A04A' },
+  { angle: -30, label: 'Mobile\nApps',     short: 'MOB', color: '#3D9080' },
+  { angle:  30, label: 'UX / UI\nDesign',  short: 'UX', color: '#FB923C' },
+  { angle:  90, label: 'Fine\nTuning',     short: 'TUNE', color: '#818CF8' },
+  { angle: 150, label: 'Agentic\nSystems', short: 'SYS',  color: '#4ADE80' },
+  { angle: -150, label: 'Custom\nAgents',  short: 'AGNT',   color: '#C8A04A' },
 ]
 
 // ─── Data ────────────────────────────────────────────────────────────────────
@@ -22,85 +22,85 @@ const ORBIT_NODES = [
 const systems = [
   {
     number: '01',
-    name: 'Communication Intelligence',
-    tagline: 'Every client conversation. Tracked, summarised, actioned.',
+    name: 'Web App Development',
+    tagline: 'High-performance applications built for scale and speed.',
     accent: 'rgba(200,160,74,0.8)',
     accentClass: 'text-gold-light',
     borderClass: 'border-gold-primary/20',
     capabilities: [
-      'WhatsApp, email and call threads unified in one AI layer',
-      'Next action extracted automatically from every conversation',
-      'Client sentiment tracked without manual logging',
+      'Next.js and React full-stack architecture',
+      'Real-time data synchronization and edge computing',
+      'Enterprise-grade security and authentication',
     ],
     visual: <CommVisual />,
   },
   {
     number: '02',
-    name: 'Document & Knowledge Engine',
-    tagline: 'Every spec, contract, mood board — searchable and AI-aware.',
+    name: 'Mobile App Development',
+    tagline: 'Native and cross-platform apps that bring AI to every pocket.',
     accent: 'rgba(61,144,128,0.8)',
     accentClass: 'text-teal-light',
     borderClass: 'border-teal-primary/20',
     capabilities: [
-      'All project documents indexed and version-controlled automatically',
-      'Ask questions across your entire document history in plain language',
-      'Smart tagging by project, client, and document type',
+      'iOS and Android native performance',
+      'Offline-first capabilities and local caching',
+      'On-device machine learning integration',
     ],
     visual: <DocVisual />,
   },
   {
     number: '03',
-    name: 'Vendor Coordination System',
-    tagline: 'No vendor slips through the cracks. Ever.',
+    name: 'UX/UI Design',
+    tagline: 'Interfaces so intuitive that the AI disappears.',
     accent: 'rgba(251,146,60,0.7)',
     accentClass: 'text-orange-300',
     borderClass: 'border-orange-500/20',
     capabilities: [
-      'Automated follow-ups sent when vendors go silent',
-      'Commitment tracking — what was promised and when',
-      'Escalation triggers when deadlines are at risk',
+      'Cinematic motion design and micro-interactions',
+      'Comprehensive design systems and component libraries',
+      'Data-dense dashboard and workflow visualization',
     ],
     visual: <VendorVisual />,
   },
   {
     number: '04',
-    name: 'Project Intelligence',
-    tagline: 'Timelines that stay current without anyone maintaining them.',
+    name: 'AI Model Fine-Tuning',
+    tagline: 'Custom models trained on your proprietary data and domain.',
     accent: 'rgba(129,140,248,0.8)',
     accentClass: 'text-indigo-300',
     borderClass: 'border-indigo-500/20',
     capabilities: [
-      'Milestones updated from communications — not manual entry',
-      'Cross-project dependency mapping across your entire portfolio',
-      'Automatic delay detection with suggested recovery actions',
+      'Llama 3, Mistral, and Claude fine-tuning pipelines',
+      'Retrieval-Augmented Generation (RAG) architecture',
+      'Continuous evaluation and drift prevention',
     ],
     visual: <ProjectVisual />,
   },
   {
     number: '05',
-    name: 'Financial Intelligence',
-    tagline: 'Quotations, invoices, payments — no errors, no chasing.',
+    name: 'Agentic AI Systems',
+    tagline: 'Autonomous systems that observe, decide, and execute.',
     accent: 'rgba(74,222,128,0.7)',
     accentClass: 'text-emerald-300',
     borderClass: 'border-emerald-500/20',
     capabilities: [
-      'Quotation errors caught before they leave your desk',
-      'Payment follow-ups triggered automatically at due dates',
-      'Revenue per project tracked without a separate tool',
+      'Multi-agent workflow orchestration',
+      'Dynamic tool use and API integration',
+      'Self-correcting execution loops',
     ],
     visual: <FinanceVisual />,
   },
   {
     number: '06',
-    name: 'Client Experience Layer',
-    tagline: 'Your clients feel the system working, even when they don\'t see it.',
+    name: 'AI Agent Development',
+    tagline: 'Custom co-pilots built for your specific business workflows.',
     accent: 'rgba(200,160,74,0.6)',
     accentClass: 'text-gold-light',
     borderClass: 'border-gold-primary/20',
     capabilities: [
-      'Proposals and mood boards assembled and distributed automatically',
-      'Approval workflows built into the client experience',
-      'Progress updates sent on a schedule — no manual effort',
+      'Context-aware conversational interfaces',
+      'Deterministic execution layer for reliable output',
+      'Seamless human-in-the-loop handoffs',
     ],
     visual: <ClientVisual />,
   },
@@ -447,7 +447,7 @@ export default function WhatWeBuildPage() {
                 className="block w-8 h-px bg-gold-primary/40 origin-right" />
             </motion.div>
 
-            {'Everything your firm does —'.split(' ').map((word, i) => (
+            {'Everything your business needs —'.split(' ').map((word, i) => (
               <motion.span key={i}
                 initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
@@ -461,7 +461,7 @@ export default function WhatWeBuildPage() {
               transition={{ delay: 0.8, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="block text-5xl md:text-7xl font-display font-light italic text-teal-light leading-tight mt-1"
             >
-              finally connected.
+              finally shipped.
             </motion.span>
 
             <motion.p
@@ -469,13 +469,13 @@ export default function WhatWeBuildPage() {
               transition={{ delay: 1.2, duration: 0.8 }}
               className="mt-8 text-base text-text-secondary font-light tracking-wide"
             >
-              One AI operating layer. Six interconnected capabilities.
+              One engineering partner. Six interconnected capabilities.
             </motion.p>
 
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}
               transition={{ delay: 1.5, duration: 0.8 }}
               className="mt-8 flex items-center justify-center gap-2 font-mono text-[10px] text-text-tertiary tracking-[0.25em]">
-              <span>Scroll to explore each system</span>
+              <span>Scroll to explore capabilities</span>
               <motion.span animate={{ y: [0, 4, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>↓</motion.span>
             </motion.div>
           </div>
@@ -509,15 +509,15 @@ export default function WhatWeBuildPage() {
             viewport={{ once: true }} transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-2xl mx-auto">
             <p className="text-3xl md:text-4xl font-display font-light italic text-text-secondary mb-2">
-              Six systems.
+              Six capabilities.
             </p>
             <p className="text-4xl md:text-5xl font-display font-normal text-text-bright mb-12">
-              One architecture.
+              One engineering partner.
             </p>
-            <Link href="/request-audit"
+            <Link href="/contact"
               className="group inline-flex items-center gap-3 px-10 py-4 bg-gold-primary text-bg-deep font-body font-semibold text-sm tracking-widest uppercase rounded-sm hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(200,160,74,0.3)] transition-all duration-300 overflow-hidden relative">
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-              <span className="relative z-10">Begin Your Systems Audit</span>
+              <span className="relative z-10">Start Your Project</span>
               <span className="relative z-10 text-bg-deep/60 group-hover:translate-x-1 transition-transform">→</span>
             </Link>
             <p className="mt-6 font-mono text-[10px] text-text-tertiary tracking-[0.3em] opacity-40 uppercase">

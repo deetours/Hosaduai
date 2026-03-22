@@ -123,62 +123,61 @@ function CyclingHero() {
 
 // ─── Industry Data ────────────────────────────────────────────────────────────
 
-const industries = [
+const INDUSTRIES = [
   {
-    id: 'interior-design',
-    eyebrow: 'INTERIOR DESIGNERS',
-    number: '01',
-    headline: 'She runs the design.',
-    headlineAccent: 'The system runs everything else.',
-    scene: [
-      { text: "12 active projects. A studio of 3." },
-      { text: "Every client has a different WhatsApp thread." },
-      { text: "Every project has a different mood board version." },
-      { text: "Every vendor has a different follow-up status." },
-      { text: "She tracks it all. In her head.", highlight: "In her head." },
+    id: 'saas-tech',
+    title: 'SaaS & Tech',
+    subtitle: 'From feature differentiation to category leadership.',
+    heroStat: '10x',
+    heroStatLabel: 'faster time-to-market',
+    problems: [
+      'Struggling to integrate AI without breaking core architecture.',
+      'Models hallucinating or producing unreliable outputs for users.',
+      'Competitors moving faster with native AI features.'
     ],
-    resolution: "With HosaduAI: one surface. 12 projects. Every thread, revision, and vendor — tracked and actioned automatically.",
-    accentColor: 'rgba(200,160,74,0.1)',
-    accentBorder: 'border-gold-primary/20',
-    accentText: 'text-gold-light',
-    visual: <DesignerVisual />,
+    solutions: [
+      'Enterprise-grade AI integration that scales with your platform.',
+      'Fine-tuned models and guardrails for deterministic, safe outputs.',
+      'Agentic workflows that turn simple tools into autonomous systems.'
+    ],
+    accent: '#C8A04A'
   },
   {
-    id: 'architecture',
-    eyebrow: 'ARCHITECTS',
-    number: '02',
-    headline: 'His firm wins on design.',
-    headlineAccent: 'Loses weeks on coordination.',
-    scene: [
-      { text: "A structural engineer waiting on revised drawings." },
-      { text: "A contractor asking about a spec from three weeks ago." },
-      { text: "An invoice tied to a milestone no one has tracked." },
-      { text: "The client approved revision 4. Someone is still working on revision 3.", highlight: "Someone is still working on revision 3." },
+    id: 'ecommerce',
+    title: 'E-Commerce',
+    subtitle: 'Hyper-personalized shopping at absolute scale.',
+    heroStat: '35%',
+    heroStatLabel: 'conversion lift',
+    problems: [
+      'Generic product recommendations that ignore user intent.',
+      'Customer support overwhelming the team during peak spikes.',
+      'Manual catalog tagging and inventory management.'
     ],
-    resolution: "With HosaduAI: every consultant, drawing revision, and billing milestone — tracked without a single manual log.",
-    accentColor: 'rgba(61,144,128,0.1)',
-    accentBorder: 'border-teal-primary/20',
-    accentText: 'text-teal-light',
-    visual: <ArchVisual />,
+    solutions: [
+      'Context-aware recommendation engines driven by real-time behavior.',
+      'AI agents capable of handling complex support and returns autonomously.',
+      'Automated multimodal catalog processing and enrichment.'
+    ],
+    accent: '#3D9080'
   },
   {
-    id: 'consulting',
-    eyebrow: 'MANAGEMENT CONSULTANTS',
-    number: '03',
-    headline: 'Three retainers.',
-    headlineAccent: 'One person tracking all twelve deliverables.',
-    scene: [
-      { text: "Report due Friday. Draft sits in email." },
-      { text: "Client asked for an update three days ago.", highlight: "three days ago." },
-      { text: "A billing stage passed last month. Invoice not raised." },
-      { text: "She knows all of this. She is waiting for time to act on it.", highlight: "waiting for time" },
+    id: 'fintech',
+    title: 'Fintech & Finance',
+    subtitle: 'Unprecedented intelligence without compromising security.',
+    heroStat: 'Zero',
+    heroStatLabel: 'compliance breaches',
+    problems: [
+      'Legacy systems resisting integration with modern LLMs.',
+      'High operational costs for compliance, KYC, and document review.',
+      'Data privacy concerns preventing cloud AI adoption.'
     ],
-    resolution: "With HosaduAI: every deliverable, follow-up, and billing trigger — surfaced before it becomes a problem.",
-    accentColor: 'rgba(129,140,248,0.1)',
-    accentBorder: 'border-indigo-500/20',
-    accentText: 'text-indigo-300',
-    visual: <ConsultVisual />,
-  },
+    solutions: [
+      'Secure, localized AI architectures deployed within your VPC.',
+      'Automated extraction and analysis of unstructured financial documents.',
+      'Real-time fraud detection and predictive risk modeling.'
+    ],
+    accent: '#818CF8'
+  }
 ]
 
 // ─── Visualizations ───────────────────────────────────────────────────────────
@@ -282,7 +281,7 @@ function ConsultVisual() {
 // ─── Industry Panel ───────────────────────────────────────────────────────────
 
 function IndustryPanel({ industry, index, total, scrollYProgress }: {
-  industry: typeof industries[0], index: number, total: number,
+  industry: typeof INDUSTRIES[0], index: number, total: number,
   scrollYProgress: ReturnType<typeof useScroll>['scrollYProgress']
 }) {
   const seg = 1 / total
@@ -294,6 +293,10 @@ function IndustryPanel({ industry, index, total, scrollYProgress }: {
     [0, 1, 1, index === total - 1 ? 1 : 0])
   const y = useTransform(scrollYProgress, [start, start + 0.08], [50, 0])
 
+  const accentColor = industry.accent + '1A'; // 10% opacity
+  const accentBorder = `border-[${industry.accent}]/20`;
+  const accentText = `text-[${industry.accent}]`;
+
   return (
     <motion.div className="absolute inset-0 flex items-center px-6 md:px-16" style={{ opacity, y }}>
       <div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
@@ -301,38 +304,48 @@ function IndustryPanel({ industry, index, total, scrollYProgress }: {
         {/* Left — Story */}
         <div>
           <div className="font-mono text-[10px] tracking-[0.35em] text-text-tertiary mb-4">
-            {industry.number} / {String(total).padStart(2, '0')} · {industry.eyebrow}
+            {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')} · {industry.title.toUpperCase()}
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-normal text-text-bright mb-1 leading-tight">
-            {industry.headline}
+            {industry.subtitle}
           </h2>
-          <h2 className={`text-3xl md:text-4xl font-display font-light italic mb-8 leading-tight ${industry.accentText}`}>
-            {industry.headlineAccent}
+          <h2 className={`text-3xl md:text-4xl font-display font-light italic mb-8 leading-tight ${accentText}`}>
+            {industry.heroStat} {industry.heroStatLabel}
           </h2>
 
-          {/* Scene lines */}
+          {/* Problems */}
           <div className="space-y-2 mb-8">
-            {industry.scene.map((line, i) => (
-              <p key={i} className="text-base text-text-tertiary leading-relaxed font-light">
-                {line.highlight
-                  ? line.text.replace(line.highlight, '')
-                  : line.text}
-                {line.highlight && <span className="text-text-bright">{line.highlight}</span>}
+            <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-text-tertiary mb-2">
+              The Problem
+            </p>
+            {industry.problems.map((line, i) => (
+              <p key={i} className="text-base text-text-tertiary leading-relaxed font-light flex items-start gap-2">
+                <span className="text-gold-primary text-lg leading-none">•</span> {line}
               </p>
             ))}
           </div>
 
-          {/* Resolution */}
-          <div className={`border-l-2 ${industry.accentBorder} pl-4`}>
-            <p className={`text-sm leading-relaxed ${industry.accentText}`}>{industry.resolution}</p>
+          {/* Solutions */}
+          <div className={`border-l-2 ${accentBorder} pl-4`}>
+            <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-text-tertiary mb-2">
+              Our Solution
+            </p>
+            {industry.solutions.map((line, i) => (
+              <p key={i} className={`text-sm leading-relaxed ${accentText} flex items-start gap-2`}>
+                <span className="text-gold-primary text-lg leading-none">→</span> {line}
+              </p>
+            ))}
           </div>
         </div>
 
         {/* Right — Visual */}
         <div className="flex items-center justify-center">
-          <div className={`w-full rounded-2xl border ${industry.accentBorder} p-6 md:p-8`}
-            style={{ background: industry.accentColor }}>
-            {industry.visual}
+          <div className={`w-full rounded-2xl border ${accentBorder} p-6 md:p-8`}
+            style={{ background: accentColor }}>
+            {/* Placeholder for visual, or dynamic visual based on industry.id */}
+            {industry.id === 'saas-tech' && <DesignerVisual />}
+            {industry.id === 'ecommerce' && <ArchVisual />}
+            {industry.id === 'fintech' && <ConsultVisual />}
           </div>
         </div>
       </div>
@@ -347,6 +360,19 @@ export default function IndustriesPage() {
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start start', 'end end'] })
   const lineWidth = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
 
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.on("change", (latest) => {
+      const newIndex = Math.min(
+        Math.floor(latest * INDUSTRIES.length),
+        INDUSTRIES.length - 1
+      );
+      setActiveIndex(newIndex);
+    });
+    return () => unsubscribe();
+  }, [scrollYProgress]);
+
   return (
     <>
       <Nav />
@@ -358,7 +384,7 @@ export default function IndustriesPage() {
         <SectionDivider />
 
         {/* ── Industry Sticky Scroll ── */}
-        <div ref={containerRef} style={{ height: `${industries.length * 130 + 20}vh` }} className="relative">
+        <div ref={containerRef} style={{ height: `${INDUSTRIES.length * 130 + 20}vh` }} className="relative">
           <div className="sticky top-0 z-20 pointer-events-none" style={{ height: 0 }}>
             <div className="absolute top-0 left-0 right-0 h-px bg-white/5">
               <motion.div className="h-full bg-gradient-to-r from-gold-primary via-teal-primary to-indigo-400"
@@ -366,8 +392,8 @@ export default function IndustriesPage() {
             </div>
           </div>
           <div className="sticky top-0 h-screen bg-bg-deep overflow-hidden">
-            {industries.map((ind, i) => (
-              <IndustryPanel key={i} industry={ind} index={i} total={industries.length} scrollYProgress={scrollYProgress} />
+            {INDUSTRIES.map((ind, i) => (
+              <IndustryPanel key={i} industry={ind} index={i} total={INDUSTRIES.length} scrollYProgress={scrollYProgress} />
             ))}
           </div>
         </div>
@@ -379,24 +405,21 @@ export default function IndustriesPage() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-xl mx-auto">
-            <p className="text-2xl md:text-3xl font-display font-light italic text-text-secondary mb-2">
-              Your industry is specific.
+            <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-text-tertiary mb-6">
+              Ready to build the future?
             </p>
-            <p className="text-3xl md:text-4xl font-display font-normal text-text-bright mb-12">
-              Your operational architecture should be too.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/what-we-build"
-                className="px-8 py-3.5 border border-white/10 text-text-secondary font-body font-semibold text-[13px] tracking-widest uppercase rounded-sm hover:bg-white/5 hover:text-text-bright hover:border-gold-primary/30 transition-all duration-300">
-                See What We Build
+            <div className="mb-12">
+                <p className="text-xl md:text-3xl font-display text-text-bright">
+                  We build AI systems for {INDUSTRIES[activeIndex].title.toLowerCase()} that actually move the needle.
+                </p>
+              </div>
+
+              <Link 
+                href="/contact"
+                className="group relative inline-flex items-center gap-4 px-10 py-5 bg-gold-primary text-bg-deep font-body font-bold text-xs tracking-[0.3em] uppercase rounded-sm overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(200,160,74,0.3)]"
+              >
+                <span className="relative z-10">Start a Project →</span>
               </Link>
-              <Link href="/request-audit"
-                className="group relative inline-flex items-center gap-2 px-8 py-3.5 bg-gold-primary text-bg-deep font-body font-semibold text-[13px] tracking-widest uppercase rounded-sm hover:scale-[1.03] hover:shadow-[0_0_40px_rgba(200,160,74,0.3)] transition-all duration-300 overflow-hidden">
-                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                <span className="relative z-10">Request Audit</span>
-                <span className="relative z-10 text-bg-deep/60 group-hover:translate-x-1 transition-transform">→</span>
-              </Link>
-            </div>
           </motion.div>
         </section>
 

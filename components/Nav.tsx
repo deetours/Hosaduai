@@ -18,8 +18,8 @@ export function Nav() {
     { label: 'The Manifesto', href: '/manifesto' },
     { label: 'What We Build', href: '/what-we-build' },
     { label: 'Services', href: '/services' },
+    { label: 'Our Process', href: '/our-approach' },
     { label: 'Industries', href: '/industries' },
-    { label: 'Our Approach', href: '/our-approach' },
   ]
 
   return (
@@ -55,11 +55,11 @@ export function Nav() {
 
       {/* CTA Button */}
       <Link
-        href="/request-audit"
+        href="/contact"
         className="relative px-3 md:px-7 py-1.5 md:py-2 border border-gold-primary/50 text-gold-primary font-body text-[11px] md:text-[13px] font-semibold rounded-button hover:bg-gold-primary hover:text-bg-deep transition-all duration-300 overflow-hidden group shadow-premium-inner shrink-0"
       >
-        <span className="relative z-10 hidden sm:inline">Request Audit →</span>
-        <span className="relative z-10 sm:hidden">Audit →</span>
+        <span className="relative z-10 hidden sm:inline">Start a Project →</span>
+        <span className="relative z-10 sm:hidden">Start →</span>
         <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-[shimmer_1.5s_infinite]" />
       </Link>
     </nav>

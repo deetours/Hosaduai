@@ -13,18 +13,18 @@ const gsapPromise = typeof window !== 'undefined'
 
 // Each line has text + optional highlighted spans
 const sceneLines: { text: string; highlights?: string[] }[] = [
-  { text: "She opens her laptop at 9am." },
-  { text: "Fourteen WhatsApp threads. Three projects.", highlights: ["Fourteen WhatsApp threads."] },
-  { text: "A vendor hasn't responded. Again.", highlights: ["Again."] },
-  { text: "A client wants a revised mood board by noon.", highlights: ["by noon."] },
-  { text: "A quotation error she found yesterday.", highlights: ["error"] },
-  { text: "A site visit she forgot to confirm.", highlights: ["forgot"] },
-  { text: "She has four AI subscriptions.", highlights: ["four AI subscriptions."] },
-  { text: "None of them talk to each other.", highlights: ["None of them"] },
-  { text: "None of them know how she actually works.", highlights: ["None of them"] },
-  { text: "She is not failing.", highlights: ["not failing."] },
-  { text: "She is talented, driven, deeply capable.", highlights: ["talented, driven, deeply capable."] },
-  { text: "She is operating in a system that was never designed for her.", highlights: ["never designed for her."] },
+  { text: "He has an idea that could change everything." },
+  { text: "Three AI prototypes. None of them production-ready.", highlights: ["None of them production-ready."] },
+  { text: "A fine-tuned model that hallucinates on edge cases.", highlights: ["hallucinates"] },
+  { text: "An agent framework that breaks every second deploy.", highlights: ["breaks"] },
+  { text: "A demo that impressed investors but can't handle real users.", highlights: ["can't handle real users."] },
+  { text: "His dev team is brilliant at product — not at AI infrastructure.", highlights: ["not at AI infrastructure."] },
+  { text: "He's tried off-the-shelf. Too generic.", highlights: ["Too generic."] },
+  { text: "He's tried hiring ML engineers. Too slow. Too expensive.", highlights: ["Too slow. Too expensive."] },
+  { text: "The gap between AI demo and AI product keeps growing.", highlights: ["keeps growing."] },
+  { text: "He is not behind.", highlights: ["not behind."] },
+  { text: "He is ambitious, resourceful, and building something real.", highlights: ["ambitious, resourceful, and building something real."] },
+  { text: "He just needs a partner who's done this before.", highlights: ["partner who's done this before."] },
 ]
 
 function renderHighlighted(line: typeof sceneLines[0]) {

@@ -42,7 +42,7 @@ export function BeforeAfterBlock() {
           className="absolute top-20 md:top-28 left-0 right-0 text-center text-3xl md:text-4xl font-display font-normal italic text-text-bright z-40 px-4 pointer-events-none"
           style={{ opacity: bridgeOpacity }}
         >
-          That morning has two possible endings.
+          That startup has two possible futures.
         </motion.h2>
 
         {/* ─── BEFORE layer ─────────────────────────────────── */}
@@ -73,13 +73,13 @@ export function BeforeAfterBlock() {
               Without HosaduAI
             </div>
             <div className="space-y-3 font-display font-light italic text-xl md:text-2xl text-text-secondary leading-relaxed">
-              <p>9am. Fourteen WhatsApp threads.</p>
-              <p>A vendor hasn't responded.</p>
-              <p>A revision request with no system to track it.</p>
-              <p>A quotation error waiting to be found.</p>
-              <p>A site visit she forgot to confirm.</p>
+              <p>A fine-tuned model that drifts after two weeks.</p>
+              <p>An AI agent that can't handle real-world edge cases.</p>
+              <p>A chatbot demo that falls apart in production.</p>
+              <p>A team stretched thin between product and ML ops.</p>
+              <p>Three months burned. Back to square one.</p>
               <p className="pt-6 text-text-bright font-normal not-italic text-xl md:text-2xl text-[#C04838]/80">
-                The day begins in chaos.
+                The project stalls.
               </p>
             </div>
           </div>
@@ -111,16 +111,16 @@ export function BeforeAfterBlock() {
               With HosaduAI
             </div>
             <div className="space-y-3 font-display font-light italic text-xl md:text-2xl text-text-secondary leading-relaxed">
-              <p>9am. The system already ran at 8.</p>
-              <p>The vendor was followed up automatically.</p>
-              <p>The revision is categorized, logged, and drafted.</p>
-              <p>The quotation error was caught last night.</p>
-              <p>The site visit confirmation went out at 7am.</p>
+              <p>The model is fine-tuned on your data — and stays accurate.</p>
+              <p>The agent handles edge cases because it was built for your domain.</p>
+              <p>The app is live, fast, and users don't know AI is behind it.</p>
+              <p>Your team focuses on product. We handle the intelligence layer.</p>
+              <p>You shipped in weeks, not quarters.</p>
               <p className="pt-6">
-                She opens her laptop to three decisions that actually need her.
+                He opens his dashboard to real users, real data, real traction.
               </p>
               <p className="pt-2 text-teal-light font-normal not-italic text-xl md:text-2xl">
-                The day begins in clarity.
+                The product launches.
               </p>
             </div>
           </div>
@@ -132,11 +132,11 @@ export function BeforeAfterBlock() {
           style={{ opacity: textOpacity, y: textY }}
         >
           <p className="text-xl md:text-3xl font-display font-light italic text-text-secondary max-w-2xl text-center leading-relaxed mb-4">
-            That is not AI assistance.
+            That is not AI experimentation.
           </p>
           <p className="text-2xl md:text-4xl font-display font-normal text-text-bright max-w-2xl text-center leading-tight">
             That is{' '}
-            <span className="italic text-gold-light">AI infrastructure.</span>
+            <span className="italic text-gold-light">AI engineering.</span>
           </p>
           <motion.div
             initial={{ scaleX: 0 }}

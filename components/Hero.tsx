@@ -5,8 +5,8 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'fram
 import { useRef, useEffect } from 'react'
 
 export function Hero() {
-  const line1 = 'One AI system.'
-  const line2 = 'Built around your firm.'
+  const line1 = 'We build the AI'
+  const line2 = 'your business runs on.'
 
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
@@ -109,7 +109,7 @@ export function Hero() {
           className="font-mono text-eyebrow text-gold-primary mb-8 md:mb-12 flex items-center justify-center lg:justify-start gap-4"
         >
           <span className="w-8 h-px bg-gold-primary/50" />
-          AI OPERATING SYSTEM · INDIAN SERVICE BUSINESSES
+          AI DEVELOPMENT AGENCY · FROM IDEA TO INTELLIGENCE
         </motion.div>
 
         {/* Main Headline */}
@@ -151,7 +151,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="text-lg md:text-xl text-text-secondary max-w-xl mx-auto lg:mx-0 mb-10 md:mb-12 font-body font-light leading-relaxed"
         >
-          We replace your disconnected tools with one AI system that runs your operations — built for interior designers, architects, and consultants.
+          From intelligent agents to production-ready apps — we design, fine-tune, and deploy AI systems that actually work. Built for founders and teams who refuse to wait.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -162,10 +162,9 @@ export function Hero() {
           className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start mb-12"
         >
           <Link
-            href="/request-audit"
-            className="group relative overflow-hidden px-8 py-3.5 bg-gold-primary text-bg-deep font-body font-semibold text-[13px] tracking-widest uppercase rounded-sm hover:scale-[1.02] transition-all duration-300 ease-soft-spring shadow-premium-glow flex items-center justify-center"
-          >
-            <span className="relative z-10">Get a Free Systems Audit</span>
+            href="/contact"
+            className="group relative inline-flex items-center gap-4 md:px-12 md:py-5 px-10 py-5 bg-gold-primary text-bg-deep font-body font-bold text-[11px] md:text-sm tracking-[0.25em] md:tracking-[0.2em] uppercase rounded-sm overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(200,160,74,0.4)] w-full md:w-auto justify-center"
+          >          <span className="relative z-10">Start Your Project</span>
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:animate-[shimmer_1.5s_infinite]" />
           </Link>
           <Link
@@ -188,7 +187,7 @@ export function Hero() {
             <div className="w-6 h-6 rounded-full bg-gold-primary/20 border border-gold-primary/40 backdrop-blur-md" />
           </div>
           <span className="font-mono text-[10px] text-text-tertiary tracking-widest uppercase">
-            Designed for scaling service firms
+            Trusted by startups shipping real AI
           </span>
         </motion.div>
       </div>

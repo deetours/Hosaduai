@@ -4,7 +4,7 @@ import { Footer } from '@/components/Footer'
 
 export const metadata = {
   title: 'Thank You - HosaduAI',
-  description: 'Your Systems Audit request has been received. We\'ll be in touch soon.',
+  description: 'Your project request has been received. We\'ll be in touch soon.',
 }
 
 export default function ThankYouPage() {
@@ -29,7 +29,7 @@ export default function ThankYouPage() {
               AI should not be a trend.
             </p>
             <p className="text-2xl md:text-3xl font-display font-normal italic text-text-bright">
-              It should be how your business runs.
+              It should be your competitive advantage.
             </p>
           </div>
 

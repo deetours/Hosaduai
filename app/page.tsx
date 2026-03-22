@@ -8,15 +8,15 @@ import { Footer } from '@/components/Footer'
 import { SectionDivider } from '@/components/SectionDivider'
 
 export const metadata = {
-  title: 'HosaduAI — AI Operating Systems for Indian Service Businesses',
+  title: 'HosaduAI — AI Development Agency',
   description:
-    'We replace fragmented tools with a single AI system built around how your firm actually works. Built for interior designers, architects, and consultants.',
+    'From intelligent agents to production-ready apps — we design, fine-tune, and deploy AI systems that actually work. Built for founders and teams who refuse to wait.',
   keywords:
-    'AI operating system, Indian SMB, service business automation, interior design AI, architect AI, operational intelligence',
+    'AI development agency, AI app development, custom AI models, agentic AI systems, machine learning engineering, start up AI development',
   openGraph: {
-    title: 'HosaduAI — AI Operating Systems for Indian Service Businesses',
+    title: 'HosaduAI — AI Development Agency',
     description:
-      'One AI system. Built around your firm. Not another tool.',
+      'We build the AI your business runs on.',
     type: 'website',
     url: 'https://hosadu.ai',
   },

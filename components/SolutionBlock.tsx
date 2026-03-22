@@ -33,7 +33,7 @@ export function SolutionBlock() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-4xl md:text-5xl font-display font-normal mb-4 md:mb-6"
         >
-          Six systems. <span className="italic text-teal-light">One operating layer.</span>
+          Six capabilities. <span className="italic text-teal-light">One engineering partner.</span>
         </motion.h2>
 
         <motion.p 
@@ -43,7 +43,7 @@ export function SolutionBlock() {
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="text-body-lg text-text-secondary max-w-2xl mb-12 md:mb-16 leading-relaxed"
         >
-          Not separate subscriptions. One coordinated AI architecture built into your firm.
+          Not freelancers stitched together. One integrated team that builds across every layer of the AI stack.
         </motion.p>
 
         {/* Bento Grid with Proximity Effect */}
@@ -63,8 +63,8 @@ export function SolutionBlock() {
           <CardWrapper index={0} className="md:col-span-2 md:row-span-1" mousePosition={mousePosition}>
             <div className="flex flex-col md:flex-row h-full gap-6 items-center">
               <div className="flex-1 space-y-4 z-10">
-                <h3 className="text-2xl font-body font-semibold text-text-bright tracking-tight">Workflow intelligence</h3>
-                <p className="text-body-sm text-text-secondary leading-relaxed">Your operations mapped, automated, and made structurally smart.</p>
+                <h3 className="text-2xl font-body font-semibold text-text-bright tracking-tight">Web App Development</h3>
+                <p className="text-body-sm text-text-secondary leading-relaxed">High-performance applications built with React, Next.js, and modern frameworks. Fast, scalable, production-ready from day one.</p>
               </div>
               <div className="w-full md:w-1/2 h-32 relative flex items-center justify-center">
                 {/* Abstract Node Graph */}
@@ -100,8 +100,8 @@ export function SolutionBlock() {
                ))}
              </div>
              <div className="space-y-4 z-10">
-                <h3 className="text-xl font-body font-semibold text-text-bright tracking-tight">Decision support</h3>
-                <p className="text-body-sm text-text-secondary leading-relaxed">Right information surfaces exactly at the right moment.</p>
+                <h3 className="text-xl font-body font-semibold text-text-bright tracking-tight">AI Model Fine-Tuning</h3>
+                <p className="text-body-sm text-text-secondary leading-relaxed">Custom models trained on your data, your domain, your edge cases. No hallucinations. No drift. Just accurate intelligence.</p>
              </div>
           </CardWrapper>
 
@@ -115,8 +115,8 @@ export function SolutionBlock() {
                   <div className="h-2 max-w-[80%] bg-white/5 rounded-full" />
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-body font-semibold text-text-bright tracking-tight">Client coordination</h3>
-                  <p className="text-body-sm text-text-secondary leading-relaxed">Communications organized without any manual effort.</p>
+                  <h3 className="text-xl font-body font-semibold text-text-bright tracking-tight">UX/UI Design</h3>
+                  <p className="text-body-sm text-text-secondary leading-relaxed">Interfaces so intuitive that the AI disappears. Your users see magic — not machinery.</p>
                 </div>
              </div>
           </CardWrapper>
@@ -130,8 +130,8 @@ export function SolutionBlock() {
                  <div className="absolute inset-6 rounded-full bg-gold-primary/20 blur-sm" />
                </div>
                <div className="space-y-4">
-                  <h3 className="text-xl font-body font-semibold text-text-bright tracking-tight">Vendor automation</h3>
-                  <p className="text-body-sm text-text-secondary leading-relaxed">Follow-ups and procurement flows run themselves quietly.</p>
+                  <h3 className="text-xl font-body font-semibold text-text-bright tracking-tight">Mobile App Development</h3>
+                  <p className="text-body-sm text-text-secondary leading-relaxed">Native and cross-platform apps that bring AI to every pocket. iOS, Android, or both — shipped fast.</p>
                </div>
              </div>
           </CardWrapper>
@@ -151,8 +151,8 @@ export function SolutionBlock() {
                   ))}
                 </div>
                 <div className="flex-1 space-y-4 z-10">
-                  <h3 className="text-2xl font-body font-semibold text-text-bright tracking-tight">Operational memory</h3>
-                  <p className="text-body-sm text-text-secondary leading-relaxed">Your business stops forgetting; every action becomes a repeatable learning pattern.</p>
+                  <h3 className="text-2xl font-body font-semibold text-text-bright tracking-tight">Agentic AI Systems</h3>
+                  <p className="text-body-sm text-text-secondary leading-relaxed">Autonomous systems that observe, decide, and act. Your business gets an AI co-pilot that never sleeps.</p>
                 </div>
              </div>
           </CardWrapper>
@@ -162,8 +162,8 @@ export function SolutionBlock() {
             <div className="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-t from-gold-primary/10 to-transparent pointer-events-none" />
             <div className="relative z-10 flex flex-col h-full justify-between gap-6">
               <div className="space-y-4">
-                <h3 className="text-xl font-body font-semibold text-text-bright tracking-tight">Continuous improvement</h3>
-                <p className="text-body-sm text-text-secondary leading-relaxed">The system gets more intelligent every month, autonomously.</p>
+                <h3 className="text-xl font-body font-semibold text-text-bright tracking-tight">AI Agent Development</h3>
+                <p className="text-body-sm text-text-secondary leading-relaxed">Custom agents built for your workflows. They don't just respond — they execute, integrate, and learn.</p>
               </div>
               <div className="w-full h-12 relative overflow-hidden rounded-md opacity-70">
                 <motion.div 
@@ -197,22 +197,22 @@ export function SolutionBlock() {
             {[
               {
                 num: '01',
-                verb: 'Design',
-                body: 'A system built around how your firm actually works — not a template. We map every workflow before we write a line.',
+                verb: 'Discover',
+                body: 'We audit your problem space, map your data, and architect the intelligence layer — before writing a line of code.',
                 accent: 'text-teal-light',
                 glow: 'from-teal-primary/5',
               },
               {
                 num: '02',
-                verb: 'Deploy',
-                body: 'Installed inside your operations, not beside them. No IT overhead. No prompts to write. No tools to manage.',
+                verb: 'Build',
+                body: 'End-to-end engineering. From model training to frontend polish. Deployed inside your product, not beside it.',
                 accent: 'text-gold-light',
                 glow: 'from-gold-primary/5',
               },
               {
                 num: '03',
-                verb: 'Stay accountable',
-                body: 'We measure on outcomes. Monthly reviews. If the system underperforms, we fix it — not update a roadmap.',
+                verb: 'Iterate',
+                body: 'We ship fast, measure everything, and refine continuously. If the system underperforms, we fix it — not file a ticket.',
                 accent: 'text-indigo-300',
                 glow: 'from-indigo-500/5',
               },

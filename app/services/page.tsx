@@ -151,10 +151,10 @@ export default function ServicesPage() {
                transition={{ delay: 0.4 }}
             >
               <Link 
-                href="/request-audit"
+                href="/contact"
                 className="group relative inline-flex items-center gap-6 px-12 py-6 bg-transparent border border-gold-primary text-gold-primary rounded-full overflow-hidden transition-all duration-500 hover:bg-gold-primary hover:text-bg-deep shadow-[0_0_40px_rgba(200,160,74,0.1)] hover:shadow-[0_0_60px_rgba(200,160,74,0.3)]"
               >
-                <span className="relative z-10 font-body font-bold text-[13px] tracking-[0.3em] uppercase">Detail Your Requirements →</span>
+                <span className="relative z-10 font-body font-bold text-[13px] tracking-[0.3em] uppercase">Start a Project →</span>
                 <div className="absolute inset-0 bg-gold-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
               </Link>
             </motion.div>

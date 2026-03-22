@@ -67,10 +67,10 @@ export default function ManifestoPage() {
                   Act I · The Perspective
                 </motion.div>
                 <h1 className="text-4xl md:text-6xl lg:text-8xl font-display font-light text-text-bright leading-tight">
-                  You didn’t build a business to manage <span className="italic text-teal-light">chaos.</span>
+                  You didn’t start a company to build <span className="italic text-teal-light">toys.</span>
                 </h1>
                 <p className="max-w-xl mx-auto text-text-secondary text-lg font-light leading-relaxed">
-                  Brilliant, driven, and scaling. But growth has created a trap. You are now the administrator of your own ambition.
+                  Brilliant, driven, and ambitious. But the AI hype has created a trap. You are stuck building demos instead of scalable products.
                 </p>
               </div>
            </motion.div>
@@ -95,12 +95,12 @@ export default function ManifestoPage() {
            >
               <div className="font-mono text-[10px] text-[#C04838] tracking-[0.5em] uppercase">Act II · The Friction</div>
               <h2 className="text-4xl md:text-6xl font-display font-normal text-text-bright">
-                The enemy isn't <span className="line-through opacity-40">competition.</span> <br />
-                It is <span className="text-[#C04838]">Entropy.</span>
+                The enemy isn't <span className="line-through opacity-40">the model.</span> <br />
+                It is <span className="text-[#C04838]">Infrastructure.</span>
               </h2>
               <div className="space-y-4 max-w-lg mx-auto text-text-secondary text-base italic font-light">
-                 <p>Sixteen unread WhatsApp threads. A vendor missing a deadline. A quotation error found too late. A site visit forgotten.</p>
-                 <p className="text-text-bright font-normal not-italic">Growth without systems is just a faster path to burnout.</p>
+                 <p>A fine-tuned model that drifts. An agent that breaks on edge cases. A prompt wrapper disguised as a product.</p>
+                 <p className="text-text-bright font-normal not-italic">AI without engineering is just a weekend project.</p>
               </div>
            </motion.div>
            
@@ -125,11 +125,11 @@ export default function ManifestoPage() {
               <div className="flex-1 space-y-12">
                  <div className="font-mono text-[10px] text-teal-primary tracking-[0.5em] uppercase">Act III · The Territory</div>
                  <h2 className="text-4xl md:text-6xl font-display text-text-bright leading-[0.9]">
-                   India is building <br />
+                   Founders are shipping <br />
                    <span className="italic text-teal-light">at the speed of light.</span>
                  </h2>
                  <p className="text-text-secondary text-lg font-light leading-relaxed">
-                   But to build generational, world-beating companies, sheer willpower is no longer enough. We need absolute operational superiority.
+                   But to build generational, world-beating AI products, prompt engineering is no longer enough. You need absolute engineering superiority.
                  </p>
                  <div className="grid grid-cols-2 gap-8 pt-8">
                     <div className="space-y-1">
@@ -150,7 +150,7 @@ export default function ManifestoPage() {
                    transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
                    className="w-full h-full border-t border-teal-primary/20 rounded-full" 
                  />
-                 <div className="text-5xl font-display italic text-teal-primary opacity-20">Bharat</div>
+                 <div className="text-5xl font-display italic text-teal-primary opacity-20">Scale</div>
               </div>
            </motion.div>
         </section>
@@ -167,16 +167,16 @@ export default function ManifestoPage() {
               <div className="font-mono text-[10px] text-gold-primary tracking-[0.5em] uppercase">Act IV · The Spark</div>
               <div className="space-y-8">
                  <h2 className="text-3xl md:text-5xl font-display font-light text-text-secondary leading-relaxed">
-                   We realized <span className="text-text-bright font-normal">software isn't enough.</span> <br />
-                   You don't need another tool.
+                   We realized <span className="text-text-bright font-normal">APIs aren't enough.</span> <br />
+                   You don't need another wrapper.
                  </h2>
                  <div className="w-16 h-px bg-gold-primary/30 mx-auto" />
                  <h3 className="text-4xl md:text-7xl font-display text-text-bright">
-                   You need an <span className="italic text-gold-light">Architecture.</span>
+                   You need <span className="italic text-gold-light">Engineering.</span>
                  </h3>
               </div>
               <p className="max-w-xl mx-auto text-text-tertiary text-base font-light leading-relaxed">
-                HosaduAI was born from watching brilliant minds waste their time on robotic tasks. We build the architecture that lets you be human again.
+                HosaduAI was born from watching brilliant product teams struggle with machine learning infrastructure. We build the intelligence layer so you can focus on the product.
               </p>
            </motion.div>
         </section>
@@ -199,35 +199,35 @@ export default function ManifestoPage() {
                    The Paradigm Shift
                  </motion.div>
                  <h2 className="text-5xl md:text-7xl font-display text-text-bright leading-tight">
-                   From Chaos <br />
-                   <span className="italic text-teal-light">to Institution.</span>
+                   From Prototype <br />
+                   <span className="italic text-teal-light">to Production.</span>
                  </h2>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 text-left border-t border-b border-white/5 py-8 md:py-12">
                  <div className="space-y-2">
                     <div className="font-mono text-[10px] text-gold-light tracking-widest uppercase">The Hero</div>
-                    <p className="text-sm text-text-secondary font-light">The founder, visionary and focused.</p>
+                    <p className="text-sm text-text-secondary font-light">The product team, visionary and focused.</p>
                  </div>
                  <div className="space-y-2">
-                    <div className="font-mono text-[10px] text-teal-primary tracking-widest uppercase">The System</div>
-                    <p className="text-sm text-text-secondary font-light">Operating flawlessly in the background.</p>
+                    <div className="font-mono text-[10px] text-teal-primary tracking-widest uppercase">The Technology</div>
+                    <p className="text-sm text-text-secondary font-light">Scalable, accurate, and production-ready.</p>
                  </div>
                  <div className="space-y-2">
                     <div className="font-mono text-[10px] text-[#C04838] tracking-widest uppercase">The Enemy</div>
-                    <p className="text-sm text-text-secondary font-light">Permanently defeated through architecture.</p>
+                    <p className="text-sm text-text-secondary font-light">Permanently defeated through engineering.</p>
                  </div>
               </div>
 
               <div className="flex flex-col items-center gap-8 md:gap-10">
                  <p className="text-[11px] md:text-[12px] font-mono text-text-tertiary tracking-[0.3em] uppercase max-w-[280px]">
-                   Ready to stop managing and start building?
+                   Ready to stop experimenting and start shipping?
                  </p>
                  <Link 
-                   href="/request-audit"
+                   href="/contact"
                    className="group relative px-12 md:px-16 py-6 md:py-8 bg-gold-primary text-bg-deep font-body font-bold text-[13px] md:text-[14px] tracking-[0.4em] uppercase rounded-sm overflow-hidden flex items-center justify-center transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_80px_rgba(200,160,74,0.4)]"
                  >
-                   <span className="relative z-10">Apply to Build →</span>
+                   <span className="relative z-10">Start a Project →</span>
                    <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                  </Link>
               </div>

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { Nav } from '@/components/Nav'
 import Link from 'next/link'
 
-export default function RequestAuditPage() {
+export default function ContactPage() {
   const router = useRouter()
   const [formData, setFormData] = useState({
     name: '',
@@ -99,7 +99,7 @@ export default function RequestAuditPage() {
                   transition={{ duration: 0.8 }}
                   className="font-mono text-[10px] text-gold-primary tracking-[0.4em] uppercase"
                 >
-                  Act V · The Audit
+                  Start a Project
                 </motion.div>
                 
                 <motion.h1 
@@ -118,16 +118,16 @@ export default function RequestAuditPage() {
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="text-sm lg:text-base text-text-secondary font-light leading-relaxed max-w-sm"
                 >
-                  A 45-minute deep dive into your firm's operational reality. No commitment. Just extreme clarity on how your business actually functions.
+                  A 45-minute deep dive into your product requirements. No commitment. Just extreme clarity on how to build your AI layer.
                 </motion.p>
               </div>
 
               {/* Steps Timeline */}
               <div className="space-y-8">
                 {[
-                  { step: '01', title: 'We review', desc: 'Our team analyzes your submission within 48 hours.' },
-                  { step: '02', title: 'We schedule', desc: "We'll invite you to a 1-on-1 operational audit session." },
-                  { step: '03', title: 'We map', desc: 'You get a clear architectural blueprint of your potential AI layer.' },
+                  { step: '01', title: 'We review', desc: 'Our team evaluates your project requirements within 48 hours.' },
+                  { step: '02', title: 'We schedule', desc: "We'll invite you to a 1-on-1 architectural discovery session." },
+                  { step: '03', title: 'We map', desc: 'You get a clear system blueprint of your potential AI product.' },
                 ].map((item, i) => (
                   <motion.div 
                     key={i}
@@ -191,8 +191,8 @@ export default function RequestAuditPage() {
                    className="space-y-6"
                 >
                   <label htmlFor="business" className="block space-y-2">
-                    <span className="block text-2xl lg:text-3xl font-display font-normal text-text-bright">Tell us about your firm.</span>
-                    <span className="block text-sm text-text-tertiary font-light">Type of practice, approximate size, active workload.</span>
+                    <span className="block text-2xl lg:text-3xl font-display font-normal text-text-bright">Tell us about your product or company.</span>
+                    <span className="block text-sm text-text-tertiary font-light">Company name, industry, and scale.</span>
                   </label>
                   <input
                     required
@@ -201,7 +201,7 @@ export default function RequestAuditPage() {
                     name="business"
                     value={formData.business}
                     onChange={handleChange}
-                    placeholder="E.g., Architecture Studio, 8 people, 15 active projects"
+                    placeholder="E.g., SaaS Startup, 15 people, Seed funded"
                     className="w-full bg-transparent border-0 border-b-2 border-white/10 py-4 text-xl lg:text-2xl font-light text-text-primary placeholder:text-text-tertiary/20 focus:outline-none focus:border-gold-primary transition-colors duration-500"
                   />
                 </motion.div>
@@ -214,8 +214,8 @@ export default function RequestAuditPage() {
                    className="space-y-6"
                 >
                   <label htmlFor="challenge" className="block space-y-2">
-                    <span className="block text-2xl lg:text-3xl font-display font-normal text-text-bright">What is your operational reality?</span>
-                    <span className="block text-sm text-text-tertiary font-light">Describe the friction, the manual loops, the breaking points.</span>
+                    <span className="block text-2xl lg:text-3xl font-display font-normal text-text-bright">What are you looking to build?</span>
+                    <span className="block text-sm text-text-tertiary font-light">Describe the product, the features, the AI capabilities you need.</span>
                   </label>
                   <textarea
                     required
@@ -251,7 +251,7 @@ export default function RequestAuditPage() {
                       className="group relative px-12 py-5 bg-gold-primary text-bg-deep font-body font-semibold text-[13px] tracking-[0.2em] uppercase rounded-sm overflow-hidden flex items-center gap-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_50px_rgba(200,160,74,0.3)] disabled:opacity-50 w-full sm:w-auto text-center justify-center"
                     >
                       <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                      <span className="relative z-10">{isSubmitting ? 'Submitting...' : 'Submit Dossier'}</span>
+                      <span className="relative z-10">{isSubmitting ? 'Submitting...' : 'Send Request'}</span>
                       <motion.span 
                         animate={{ x: isSubmitting ? 0 : [0, 4, 0] }}
                         transition={{ duration: 2, repeat: Infinity }}

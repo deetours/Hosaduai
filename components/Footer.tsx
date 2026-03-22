@@ -34,16 +34,16 @@ export function Footer() {
               What We Build
             </a>
             <a
+              href="#our-approach"
+              className="font-body text-[13px] font-medium text-text-secondary hover:text-text-primary transition-colors"
+            >
+              Our Process
+            </a>
+            <a
               href="#industries"
               className="font-body text-[13px] font-medium text-text-secondary hover:text-text-primary transition-colors"
             >
               Industries
-            </a>
-            <a
-              href="#our-approach"
-              className="font-body text-[13px] font-medium text-text-secondary hover:text-text-primary transition-colors"
-            >
-              Our Approach
             </a>
           </div>
 
@@ -79,7 +79,7 @@ export function Footer() {
 
           {/* Tagline */}
           <p className="font-mono text-[10px] tracking-widest text-text-tertiary uppercase">
-            Operational Intelligence for Real Businesses
+            AI Engineering for Real Products
           </p>
 
           {/* Legal */}

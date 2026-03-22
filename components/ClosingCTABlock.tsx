@@ -54,7 +54,7 @@ export function ClosingCTABlock() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="text-2xl md:text-3xl font-display font-light italic text-text-secondary leading-relaxed mb-3"
         >
-          AI should not be a trend you adopt.
+          AI should not be a slide in your pitch deck.
         </motion.p>
 
         <motion.p
@@ -64,8 +64,8 @@ export function ClosingCTABlock() {
           transition={{ delay: 0.15, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="text-4xl md:text-6xl lg:text-7xl font-display font-normal text-text-bright leading-tight mb-16 md:mb-20"
         >
-          It should be how{' '}
-          <span className="italic text-teal-light">your business runs.</span>
+          It should be the engine{' '}
+          <span className="italic text-teal-light">your product runs on.</span>
         </motion.p>
 
         {/* Thin divider with label */}
@@ -89,8 +89,8 @@ export function ClosingCTABlock() {
           transition={{ delay: 0.5, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="text-3xl md:text-5xl font-display font-normal mb-12 md:mb-14 leading-tight"
         >
-          Let's redesign how your{' '}
-          <span className="italic text-teal-light">firm operates.</span>
+          Let's build the intelligence layer your{' '}
+          <span className="italic text-teal-light">business deserves.</span>
         </motion.h2>
 
         {/* CTA + trust stack */}
@@ -102,11 +102,11 @@ export function ClosingCTABlock() {
           className="flex flex-col items-center gap-6"
         >
           <Link
-            href="/request-audit"
+            href="/contact"
             className="group relative px-12 py-5 bg-gold-primary text-bg-deep font-body font-semibold text-sm tracking-[0.2em] uppercase rounded-sm overflow-hidden flex items-center gap-4 transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(200,160,74,0.4)]"
           >
             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-            <span className="relative z-10">Begin Your Systems Audit</span>
+            <span className="relative z-10">Start Your Project</span>
             <motion.span
               animate={{ x: [0, 4, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
@@ -115,7 +115,7 @@ export function ClosingCTABlock() {
           </Link>
 
           <div className="flex items-center gap-6 text-text-tertiary/30">
-            <span className="font-mono text-[9px] tracking-[0.25em] uppercase">Free</span>
+            <span className="font-mono text-[9px] tracking-[0.25em] uppercase">Free consultation</span>
             <span className="w-1 h-1 rounded-full bg-text-tertiary/20" />
             <span className="font-mono text-[9px] tracking-[0.25em] uppercase">No commitment</span>
             <span className="w-1 h-1 rounded-full bg-text-tertiary/20" />
